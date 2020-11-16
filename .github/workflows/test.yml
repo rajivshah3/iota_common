@@ -2,7 +2,6 @@ name: Test
 
 on:
   push:
-    branches: [ master ]
   pull_request:
     branches: [ master ]
 
@@ -76,7 +75,7 @@ jobs:
       with:
         cmakeListsOrSettingsJson: CMakeListsTxtAdvanced
         buildDirectory: ${{ github.workspace }}/build/
-        cmakeAppendedArgs: -G "Unix Makefiles" -DCMAKE_INSTALL_PREFIX=. -DTRINARY_TEST=ON
+        cmakeAppendedArgs: -G "Unix Makefiles" -DTRINARY_TEST=ON
         buildWithCMake: true
     
     - name: Run CMake tests
